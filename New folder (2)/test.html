@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<title></title>
+
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            padding: 0px;
+            margin: 0px;
+            background-color: cornsilk;
+            display: block;
+        }
+        #h{
+            display: block;
+            text-align: center;
+            font-size: 100px;
+            letter-spacing: 5px;
+            
+        }
+        #p{
+            font-size: 50px;
+            text-align: center;
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 250px;
+            font-family: fantasy;
+            color: rgba(0, 0, 0, 0.753);
+        }
+        .menu{
+            width: auto;
+            height: 44px;
+            background-color: rgba(0, 0, 0, 0.753);
+            display: block;
+            text-align: center;
+            
+            
+        }
+        .tabs{
+            width: 200px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            color:whitesmoke;
+            float: left;
+            position: relative;
+            padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .tabs-hover{
+            width: 200px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            color: rgb(158, 0, 158);
+            float: left;
+            position: relative;
+            padding: 10px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            cursor: pointer;
+        }
+        #btnProducts{
+            width: 100px;
+            height: 45px;
+            display: block;
+            position: relative;
+            top:300px;
+            margin-left: 5%;
+            background-color: rgba(82, 4, 82, 0.932);
+            color: whitesmoke;
+            text-align: center;
+            text-decoration: solid;
+            font-size: 17px;
+            border-bottom-right-radius: 30%;
+            border-bottom-left-radius: 5%;
+            border-top-left-radius: 5%;
+            border-top-right-radius: 5%;
+        }
+        #product1{
+            width: 871px;
+            height: 500px;
+            position: relative;
+            top: 400px;
+            margin-left: 5%;
+            background-image: url(product1.jpeg);
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <h id="h">MAGASINE</h>
+    <div class="menu">
+        <div data-tab-number="1" class="tabs">ABOUT</div>
+        <div data-tab-number="2" class="tabs">Products</div>
+        <div data-tab-number="3" class="tabs">Promotions</div>
+        <div data-tab-number="4" class="tabs">Contacts</div>
+    </div>
+    <p id="p">We are company for future! The Magasine love JAVASCRIPT. Html and Css help us like never! Here you will find everything and we hope tha will be usefull for you! :)</p>
+        <hr style="width: 870px; position: relative;top: 311px;"></hr>
+        <div id="btnProducts"><hr>PRODUCTS</div>
+        <div id="product1"></div>
+        
+    <script>
+        function hoverEvent(e){
+            var target=e.target;
+            switch(e.type){
+                case "mouseover":
+            if(target.className == "tabs"){
+                target.className = "tabs-hover";
+            }
+                break;
+                case "mouseout":
+            if(target.className == "tabs-hover"){
+                target.className = "tabs";
+            }    
+                break;
+        }
+        }
+        document.addEventListener("mouseover",hoverEvent);
+        document.addEventListener("mouseout",hoverEvent);
+    </script>
+
+</body>
+
+</html>
